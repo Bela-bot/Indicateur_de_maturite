@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "indicateur-de-maturite-2d30f": {
+      "hosting": {
+        "indicateur_de_maturite": [
+          "indicateur-de-maturite-2d30f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "indicateur-de-maturite-2d30f"
+  }
+}
