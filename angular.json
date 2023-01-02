@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "IndicMatGroup:build:production",
+            "firebaseProject": "indicateur-de-maturite-2d30f",
+            "firebaseHostingSite": "indicateur-de-maturite-2d30f"
+          }
         }
       }
     }
