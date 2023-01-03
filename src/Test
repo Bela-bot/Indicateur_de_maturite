@@ -1,0 +1,5 @@
+import requests
+
+url = 'https://colorlib.com/etc/tb/Table_Fixed_Header/index.html'
+reponse = requests.get(url)
+reponse.text
