@@ -8,6 +8,8 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { TableDataComponent } from './table-data/table-data.component';
+import {MatTableModule} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { TableDataComponent } from './table-data/table-data.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatTableModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase())
+    provideDatabase(() => getDatabase()),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
