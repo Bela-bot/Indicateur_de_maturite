@@ -3,7 +3,7 @@
     <table mat-table [dataSource]="train_SpectralColors">
         <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
             <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
-            <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+            <td mat-cell *matCellDef="let emp" [ngClass]="getColorClass(emp[column], column)" style="margin-top:12px;">{{ emp[column] }}</td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -18,7 +18,7 @@
     <table mat-table [dataSource]="mesured_SpectralColors">
         <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
             <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
-            <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+            <td mat-cell *matCellDef="let emp" [ngClass]="getColorClass(emp[column], column)" style="margin-top:12px;">{{ emp[column] }}</td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
