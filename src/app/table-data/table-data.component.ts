@@ -29,9 +29,6 @@ export class TableDataComponent implements OnInit {
     this.model = await tf.loadLayersModel('../../assets/model/model.json');
     this.fetchTrain_SpectralColors();
     this.fetchMesured_SpectralColors();
-      // Relative URL provided for my-model.json.
-    const prediction_array = tf.tensor2d([[0.038, 0.032, 0.032, 0.030, 0.042, 0.055, 0.467, 0.880, 0.100, 0.102]]);
-    //this.predict(prediction_array);
   }
 
   private predict(input) {
